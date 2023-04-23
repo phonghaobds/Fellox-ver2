@@ -44,7 +44,6 @@ function Project() {
         } else {
           otherBoard.push(board);
         }
-        
       });
       setProject(res.data.project);
       setBoards(myBoard);
@@ -57,11 +56,11 @@ function Project() {
     dispatch(getProject(params.id));
   }, [params]);
 
-  socket?.on("new-notifications", (data) => {
+  socket.on("new-notifications", (data) => {
     updateData();
   });
 
-  socket?.on("update-board-list", (data) => {
+  socket.on("update-board-list", (data) => {
     updateData();
   });
 

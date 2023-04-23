@@ -37,7 +37,7 @@ export default function PositionedMenu({ boardId, dataBoard, updateData }) {
         userId: userInfo._id,
         boardId: boardId,
       };
-      socket?.emit("board-drop", data);
+      socket.emit("board-drop", data);
       await deleteBoard(boardId);
       updateData();
       setAnchorEl(null);

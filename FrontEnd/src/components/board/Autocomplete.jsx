@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-import { useAutocomplete } from "@mui/base/AutocompleteUnstyled";
+import { useAutocomplete } from "@mui/base";
 import CheckIcon from "@mui/icons-material/Check";
 import CloseIcon from "@mui/icons-material/Close";
 import { autocompleteClasses } from "@mui/material/Autocomplete";
@@ -207,7 +207,9 @@ export default function CustomizedHook(props) {
     let id = [];
     let userExists = [];
     value.forEach((i) => {
-      let check = membersInBoard.some((member) => member.user._id === i.user._id);
+      let check = membersInBoard.some(
+        (member) => member.user._id === i.user._id
+      );
       if (check) {
         userExists.push(i.user);
       } else {
@@ -221,7 +223,7 @@ export default function CustomizedHook(props) {
     } else {
       await notificationAddMember(id, board, userInfo);
       dispatch(addMember(id));
-      socket?.emit("send-notifications", id);
+      socket.emit("send-notifications", id);
       if (error) {
         toast.error(error);
       }

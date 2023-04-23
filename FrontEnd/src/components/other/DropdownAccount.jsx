@@ -4,7 +4,7 @@ import { Menu, Transition } from "@headlessui/react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import Avatar from "@mui/material/Avatar";
-
+import React, { Component } from "react";
 import { logout } from "../../redux/features/auth/authSlice";
 
 function classNames(...classes) {

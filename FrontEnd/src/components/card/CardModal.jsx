@@ -43,8 +43,8 @@ const CardModal = ({ cardId, open, setOpen, card, list }) => {
 
   useEffect(() => {
     if (open) {
-      socket?.emit("join-card", cardId);
-      socket?.on("comment-new", () => {
+      socket.emit("join-card", cardId);
+      socket.on("comment-new", () => {
         getComment(card._id).then((data) => {
           setComment(data);
         });
@@ -73,7 +73,7 @@ const CardModal = ({ cardId, open, setOpen, card, list }) => {
     if (value !== "") {
       let commentNew = await sendComment(card._id, value);
       setComment([...comment, commentNew]);
-      socket?.emit("send-comment", commentNew);
+      socket.emit("send-comment", commentNew);
       setValue("");
     }
   };

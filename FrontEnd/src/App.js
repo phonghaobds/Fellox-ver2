@@ -15,6 +15,7 @@ import LayoutManagerProfie from "./components/Layout/LayoutManagerProfie";
 import { useSelector } from "react-redux";
 import Project from "./page/Project";
 import { getListProject } from "./services/project/projectService";
+import React, { Component } from "react";
 
 function App() {
   const navigate = useNavigate();
@@ -34,7 +35,7 @@ function App() {
 
   useEffect(() => {
     if (userInfo !== null) {
-      socket?.emit("setup", userInfo);
+      socket.emit("setup", userInfo);
     }
   }, [userInfo, socket]);
 

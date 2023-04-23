@@ -3,7 +3,7 @@ import { registerUser } from "../../../services/auth/authActions";
 import { userLogin } from "../../../services/auth/authActions";
 import { getUser } from "../../../services/user/userService";
 import io from "socket.io-client";
-const socket = io.connect("http://localhost:8000");
+const socket = io.connect("http://localhost:8080");
 const userToken = localStorage.getItem("userToken")
   ? localStorage.getItem("userToken")
   : null;
@@ -40,7 +40,7 @@ const authSlice = createSlice({
     },
     loginSuccess: (state) => {
       state.success = false;
-    }
+    },
   },
   extraReducers: {
     [registerUser.pending]: (state) => {

@@ -41,7 +41,7 @@ export default function Notification() {
   }, []);
 
   useEffect(() => {
-    socket?.on("new-notifications", (data) => {
+    socket.on("new-notifications", (data) => {
       getNotification()
         .then((res) => {
           setNotification(res.data.notification.new);
