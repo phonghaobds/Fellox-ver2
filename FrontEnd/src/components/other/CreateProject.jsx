@@ -65,7 +65,7 @@ export default function CreateProject({ updateProjects }) {
   });
   return (
     <div>
-      <Button variant="outlined" className="!mt-4" onClick={handleClickOpen}>
+      <Button variant="outlined" className="!mt-4" style={{ color: "#009900", "border-color": "#009900" }} onClick={handleClickOpen}>
         +
       </Button>
       <Dialog open={open} onClose={handleClose}>
@@ -79,7 +79,7 @@ export default function CreateProject({ updateProjects }) {
         >
           <div className="text-right">
             <Button onClick={handleClose}>
-              <CloseIcon style={{ width: 40, height: 40, color: "blue" }} />
+              <CloseIcon style={{ width: 40, height: 40, color: "darkgray" }} />
             </Button>
           </div>
           <DialogTitle>Hãy xây dựng một Không gian làm việc</DialogTitle>
@@ -153,7 +153,7 @@ export default function CreateProject({ updateProjects }) {
           </DialogContent>
           <DialogActions>
             <Button
-              style={{ marginRight: 80, width: 300 }}
+              style={{ marginRight: 80, width: 300, background: "#009900" }}
               type="submit"
               disableElevation
               variant="contained"

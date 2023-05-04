@@ -33,6 +33,7 @@ const BoardDrawer = () => {
         sx={{ width: "200px" }}
         onClick={() => setOpen(true)}
         variant="contained"
+        style={{background: "#009900"}}
         className={open ? "!hidden" : "flex justify-between w-40"}
       >
         <MoreHorizIcon fontSize="small" /> Hiển thị menu

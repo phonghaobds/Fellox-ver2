@@ -9,6 +9,13 @@ const firebaseConfig = {
   messagingSenderId: "319700912253",
   appId: "1:319700912253:web:74dd9b9ae3180d7ba60914",
   measurementId: "G-8S36NYXRZ7",
+  // apiKey: "AIzaSyA-zYQW3_53651bj2GGLJLwiq6oScJl_SM",
+  // authDomain: "fellox.firebaseapp.com",
+  // projectId: "fellox",
+  // storageBucket: "fellox.appspot.com",
+  // messagingSenderId: "728392368372",
+  // appId: "1:728392368372:web:de71d3236a3200544b1ea1",
+  // measurementId: "G-DHEHSEHBV7"
 };
 
 const app = initializeApp(firebaseConfig);

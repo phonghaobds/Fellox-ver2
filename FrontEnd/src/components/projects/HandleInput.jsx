@@ -215,7 +215,7 @@ export default function HandleInput({ handleClose, project, members }) {
       toast.error(`Người dùng : ${message} đã có sẵn trong nhóm!`);
     } else {
       await notificationJoinProject(id, project, userInfo);
-      socket.emit("send-notifications", id);
+      socket?.emit("send-notifications", id);
       await addUser(id, project)
         .then((res) => {
           handleClose();

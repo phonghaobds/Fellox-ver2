@@ -153,7 +153,7 @@ const Board = () => {
       <Navbar />
       <section className="board">
         <div className="board-top">
-          <div className="board-top-left items-center">
+          <div className="board-top-left items-center text-3xl" >
             <BoardTitle board={board} />
             <Members />
           </div>

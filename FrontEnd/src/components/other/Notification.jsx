@@ -41,7 +41,7 @@ export default function Notification() {
   }, []);
 
   useEffect(() => {
-    socket.on("new-notifications", (data) => {
+    socket?.on("new-notifications", (data) => {
       getNotification()
         .then((res) => {
           setNotification(res.data.notification.new);
@@ -101,7 +101,7 @@ export default function Notification() {
         onClick={handleClick}
       >
         <Badge badgeContent={newNotification} color="error">
-          <BellIcon className="h-6 w-6" aria-hidden="true" />
+          <BellIcon className="h-6 w-6 text-white" aria-hidden="true" />
         </Badge>
       </Button>
       <Menu

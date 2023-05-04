@@ -8,7 +8,7 @@ import Notification from "./Notification";
 
 const Navbar = () => {
   return (
-    <Disclosure as="nav" className="bg-blue-800">
+    <Disclosure as="nav" className="" style={{background: "#009900"}}>
       {({ open }) => (
         <>
           <div className="max-w-8xl px-2 sm:px-6 lg:px-8">
@@ -27,16 +27,9 @@ const Navbar = () => {
               <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
                 <div className="flex flex-shrink-0 items-center">
                   <Link to="/">
-                    <img
-                      style={{
-                        width: "110px",
-                        height: "60px",
-                        marginRight: "20px",
-                      }}
-                      className="hidden h-8 w-auto lg:block"
-                      src="https://download.logo.wine/logo/Trello/Trello-White-Logo.wine.png"
-                      alt="Your Company"
-                    />
+                    {/* <div className="hidden h-8 w-auto lg:block">Fellox</div> */}
+                    <div className="mx-auto mb-2 h-10 w-52 text-white items-center text-center text-4xl font-bold" >Fellox</div>
+
                   </Link>
                 </div>
                 {/* <div

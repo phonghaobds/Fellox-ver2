@@ -77,6 +77,7 @@ const List = ({ listId, index, list }) => {
                 <div className="create-card-button">
                   <Button
                     variant="contained"
+                    style={{background: "#009900"}}
                     onClick={() => setAddingCard(true)}
                   >
                     + Thêm

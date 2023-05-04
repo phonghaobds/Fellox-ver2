@@ -56,11 +56,11 @@ function Project() {
     dispatch(getProject(params.id));
   }, [params]);
 
-  socket.on("new-notifications", (data) => {
+  socket?.on("new-notifications", (data) => {
     updateData();
   });
 
-  socket.on("update-board-list", (data) => {
+  socket?.on("update-board-list", (data) => {
     updateData();
   });
 
@@ -103,7 +103,7 @@ function Project() {
                 sx={{ width: 60, height: 60 }}
                 variant="square"
                 style={{
-                  background: "linear-gradient( #403294,#0747a6)",
+                  background: "linear-gradient( #33cc33,#00cc00)",
                   borderRadius: "4px",
                 }}
               >
@@ -149,7 +149,7 @@ function Project() {
           <Button
             onClick={handleClickOpen}
             style={{
-              backgroundColor: "darkgrey",
+              backgroundColor: "#009900",
               marginLeft: 20,
               borderRadius: 13,
               color: "white",

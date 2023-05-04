@@ -87,7 +87,8 @@ function SignUp() {
 
       <Auth>
         <div className="bg-white border flex flex-col gap-2 p-4 pt-10 drop-shadow-md">
-          <img src={logo} alt="logo" className="mx-auto mb-2 h-10 w-52" />
+          <div className="mx-auto mb-2 h-10 w-52 text-green-600 items-center text-center text-4xl font-bold" >Fellox</div>
+          {/* <img src={logo} alt="logo" className="mx-auto mb-2 h-10 w-52" /> */}
           <p className="mx-auto text-slate-400 font-bold text-lg max-w-xs text-center	">
             Đăng ký tài khoản.
           </p>
@@ -171,7 +172,7 @@ function SignUp() {
             </FormControl>
             <button
               type="submit"
-              className="bg-primary-blue font-medium py-2 rounded text-white w-full"
+              className="bg-green-500 font-medium py-2 rounded text-white w-full"
             >
               Đăng ký
             </button>

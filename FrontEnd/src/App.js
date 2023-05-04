@@ -35,7 +35,7 @@ function App() {
 
   useEffect(() => {
     if (userInfo !== null) {
-      socket.emit("setup", userInfo);
+      socket?.emit("setup", userInfo);
     }
   }, [userInfo, socket]);
 

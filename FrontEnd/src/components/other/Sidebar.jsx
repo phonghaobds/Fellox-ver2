@@ -11,7 +11,7 @@ export default function Sidebar() {
     setProjects([...projects, data]);
   };
 
-  socket.on("new-notifications", (data) => {
+  socket?.on("new-notifications", (data) => {
     getListProject().then((res) => {
       setProjects(res.data);
     });

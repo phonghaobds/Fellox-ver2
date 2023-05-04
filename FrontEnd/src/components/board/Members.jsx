@@ -120,6 +120,7 @@ const Members = () => {
         <Button
           className="ml-3 flex flex-wrap"
           variant="contained"
+          style={{background: "#009900"}}
           onClick={() => setInviting(true)}
         >
           Chia sẻ bảng
